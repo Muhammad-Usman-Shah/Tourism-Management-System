@@ -1,158 +1,114 @@
 
 # Tourism Management System
 
-### MySQL Database | IoT Transport Monitoring | SQL Analytics | Power BI
+**MySQL Database | IoT Transport Monitoring | SQL Analytics | Power BI**
 
-A relational database management system developed for a tourism company using **MySQL**, with additional functionality for **IoT-based transport monitoring, SQL data analysis, and Power BI visualizations**.
+A relational database management project developed to organize tourism operations, manage booking and payment records, monitor transport activities, and analyze tourism data using SQL and Power BI.
 
-This project was completed as **Phase 4 (Final Project)** of the Database Engineering course at Namal University, Mianwali.
+The system combines traditional tourism database management with IoT-based vehicle monitoring to support structured data storage, transport tracking, operational analysis, and data visualization.
 
----
-
-## Project Information
-
-| Detail | Information |
-|---|---|
-| **Project** | Tourism Management System |
-| **Course** | Database Engineering |
-| **Phase** | Phase 4 – Final Project |
-| **Author** | Muhammad Usman Shah |
-| **Registration No.** | NUM-BSEE-2022-28 |
-| **Instructor** | Mr. Muhammad Bilal |
-| **Department** | Electrical Engineering |
-| **University** | Namal University, Mianwali |
-| **Database** | MySQL |
-| **Visualization** | Power BI |
+**Author:** Muhammad Usman Shah  
+**Project Type:** Database Engineering – Final Project  
+**Status:** Completed
 
 ---
 
 ## Project Overview
 
-The Tourism Management System is designed to organize and manage tourism-related information through a relational database.
+The Tourism Management System is a MySQL-based relational database designed to manage the main operations of a tourism company.
 
-The database maintains records of tourists, destinations, hotels, tour packages, bookings, payments, tour guides, and reviews.
+The database stores information about tourists, destinations, hotels, tour packages, bookings, payments, tour guides, and customer reviews.
 
-An additional IoT transport monitoring component stores vehicle sensor readings, including speed, fuel level, engine temperature, and GPS location. It also maintains transport alerts, trip summaries, and maintenance records.
+An additional IoT transport monitoring component manages vehicle sensor readings, including speed, fuel level, engine temperature, and GPS position. The database also maintains transport alerts, trip summaries, and maintenance records.
 
-The project includes database design, normalization, SQL implementation, verification queries, analytical queries, and Power BI dashboards.
+The project covers database design, ERD and EERD modelling, normalization, SQL implementation, database verification, analytical queries, and Power BI visualizations.
 
 ---
 
 ## Technologies Used
 
-| Technology | Purpose |
+| Technology | Application |
 |---|---|
-| **MySQL** | Relational database management |
-| **SQL** | Database creation, verification, and analysis |
-| **MySQL Workbench** | Database development and query execution |
-| **Power BI** | Data visualization and dashboards |
-| **ERD / EERD** | Database structure and relationship modelling |
-| **IoT Sensor Data** | Vehicle monitoring and transport analysis |
+| MySQL | Relational database management |
+| SQL | Database creation, verification, and analysis |
+| MySQL Workbench | Database development and query execution |
+| Power BI | Data analysis and visualization |
+| ERD / EERD | Database structure and relationship modelling |
+| IoT Sensor Data | Transport monitoring and alert analysis |
 
 ---
 
 ## Project Features
 
-### 1. Tourism Management
+### 1. Tourism Database Management
 
-- Tourist information management
-- Tourism destinations and hotels
-- Tour package management
-- Booking and payment records
-- Tour guide information and language details
+The system maintains records of:
+
+- Tourists and their information
+- Tourism destinations
+- Hotels and accommodation information
+- Tour packages
+- Tourist bookings
+- Payment transactions
+- Tour guides and supported languages
 - Customer reviews
 
 ### 2. IoT Transport Monitoring
 
-- Transport and trip records
-- Vehicle speed monitoring
-- Fuel-level monitoring
-- Engine-temperature monitoring
-- GPS location records
-- Transport alerts based on sensor readings
-- Trip summaries and maintenance records
+The transport monitoring component stores and organizes:
 
-### 3. Database Analysis
+- Vehicle speed readings
+- Fuel-level readings
+- Engine-temperature readings
+- GPS location information
+- Transport alerts
+- Trip summaries
+- Maintenance records
 
-- Tourist nationality distribution
-- Most booked destinations
-- Popular transport routes
-- Booking status analysis
-- Revenue by payment method
-- IoT transport alerts by severity
-- Transport utilization by route
+### 3. SQL-Based Data Analysis
 
-### 4. Data Visualization
+Seven analytical queries are included to examine tourism operations, booking patterns, payments, transport activity, and IoT alerts.
 
-Power BI visualizations are used to present tourism and payment-related information through charts and graphical summaries.
+### 4. Power BI Visualization
+
+Selected tourism and payment information is presented through Power BI charts for easier interpretation of the database records.
 
 ---
 
 ## Database Structure
 
-The database consists of **15 relational tables**.
+The database consists of **15 relational tables** organized into tourism operations and IoT transport monitoring.
 
-| No. | Table Name | Purpose |
+### Tourism Management Tables
+
+| No. | Table Name | Description |
 |---|---|---|
-| 1 | `Tourists` | Stores tourist details |
-| 2 | `Destinations` | Stores tourism destination information |
+| 1 | `Tourists` | Stores tourist information |
+| 2 | `Destinations` | Maintains tourism destinations |
 | 3 | `Hotels` | Stores hotel information |
-| 4 | `TourPackages` | Maintains available tour packages |
+| 4 | `TourPackages` | Contains available tour packages |
 | 5 | `Bookings` | Records tourist bookings |
-| 6 | `Payments` | Stores booking payment information |
+| 6 | `Payments` | Stores payment transactions |
 | 7 | `Guides` | Maintains tour guide records |
 | 8 | `GuideLanguages` | Stores guide language information |
-| 9 | `PackageGuides` | Links guides with tour packages |
+| 9 | `PackageGuides` | Associates tour guides with packages |
 | 10 | `Reviews` | Stores tourist reviews |
+
+### IoT Transport Monitoring Tables
+
+| No. | Table Name | Description |
+|---|---|---|
 | 11 | `Transport` | Maintains transport information |
 | 12 | `IoT_SensorReadings` | Stores vehicle sensor readings |
 | 13 | `IoT_TransportAlerts` | Records transport monitoring alerts |
-| 14 | `IoT_TripSummary` | Maintains transport trip summaries |
+| 14 | `IoT_TripSummary` | Maintains trip summary information |
 | 15 | `IoT_MaintenanceLog` | Stores vehicle maintenance records |
 
-The database uses a relational structure to connect tourism operations, bookings, transport activities, and IoT monitoring information.
-
 ---
 
-## Database Design
+## Repository Structure
 
-The project includes Entity Relationship Diagrams (ERD) and Enhanced Entity Relationship Diagrams (EERD).
-
-These diagrams represent the database entities, their attributes, and the relationships between them.
-
-### Entity Relationship Diagram (ERD)
-
-The ERD illustrates the main tables and their relationships.
-
-See the diagram in [`images/diagrams/`](images/diagrams/).
-
-### Enhanced Entity Relationship Diagram (EERD)
-
-The EERD provides an extended representation of the database design.
-
-See the diagram in [`images/diagrams/`](images/diagrams/).
-
----
-
-## Database Normalization
-
-Database normalization was considered during the design process to reduce redundancy and improve data consistency.
-
-The project report documents the normalization process, identification of database anomalies, and improvements made to the relational database design.
-
-The normalization discussion includes:
-
-- Data redundancy
-- Insertion anomalies
-- Update anomalies
-- Deletion anomalies
-- Relational table organization
-
-For detailed explanations, refer to the complete project report.
-
----
-
-## Project Folder Structure
+The repository is organized into project reports, SQL scripts, database diagrams, SQL outputs, and Power BI visualizations.
 
 ```text
 Tourism-Management-System/
@@ -191,125 +147,171 @@ Tourism-Management-System/
 |       |-- tourist_nationality_and_gender
 ```
 
-**Note:** Image names above are shown without extensions. Original image file extensions should be retained when uploading.
+**Note:** Image filenames are displayed without extensions in the original screenshot. Their actual extensions (`.png`, `.jpg`, etc.) must be retained during upload.
+
+---
+
+## Database Design
+
+The database was designed using Entity Relationship Diagrams (ERD) and Enhanced Entity Relationship Diagrams (EERD).
+
+### Entity Relationship Diagram (ERD)
+
+The ERD represents the main database entities and their relationships.
+
+**Diagram:** [View ERD and EERD folder](images/diagrams/)
+
+### Enhanced Entity Relationship Diagram (EERD)
+
+The EERD provides a more detailed representation of the database model.
+
+The design documentation is included in the project report.
+
+---
+
+## Database Normalization
+
+The project includes database normalization to improve data organization, reduce redundancy, and address database anomalies.
+
+The normalization process considers:
+
+- Data redundancy
+- Insertion anomalies
+- Update anomalies
+- Deletion anomalies
+- Relationships between database tables
+
+The complete explanation of the database design and normalization process is provided in the project report.
 
 ---
 
 ## SQL Implementation
 
-The SQL implementation is divided into three files.
+Three SQL files are provided.
 
-| SQL File | Description |
+| SQL File | Purpose |
 |---|---|
-| [`01_create_tables.sql`](sql/01_create_tables.sql) | Creates the database and its 15 tables |
-| [`02_verification_queries.sql`](sql/02_verification_queries.sql) | Contains queries for verifying table structures and records |
-| [`03_analysis_queries.sql`](sql/03_analysis_queries.sql) | Contains seven analytical SQL queries |
+| [01_create_tables.sql](sql/01_create_tables.sql) | Creates the database and its 15 tables |
+| [02_verification_queries.sql](sql/02_verification_queries.sql) | Verifies table structure and stored records |
+| [03_analysis_queries.sql](sql/03_analysis_queries.sql) | Contains seven analytical SQL queries |
 
-### 1. Database Creation
+### Database Creation
 
-The `01_create_tables.sql` file contains the SQL statements for creating the relational database structure.
+The database structure is created using:
 
-### 2. Database Verification
+`01_create_tables.sql`
 
-The `02_verification_queries.sql` file is used to verify database tables and examine stored records.
+### Database Verification
 
-Verification includes commands such as:
+The verification script contains SQL commands for checking table structures and stored information.
+
+Examples of verification commands include:
 
 ```sql
 SHOW TABLES;
+
 DESCRIBE Tourists;
+
 SELECT * FROM Tourists;
 ```
 
-### 3. Analytical Queries
+### Data Analysis
 
-The `03_analysis_queries.sql` file contains queries for generating tourism, booking, payment, and IoT monitoring insights.
+The analytical SQL script examines tourism operations, booking records, payment methods, and transport monitoring data.
 
 ---
 
-## SQL Analysis Queries
+## SQL Analysis and Results
 
-The project includes seven SQL analyses.
+The project contains seven analytical SQL queries.
 
-| No. | Analysis | Purpose |
+| No. | Analysis | Objective |
 |---|---|---|
-| 1 | Tourist Nationality Distribution | Examines the nationality distribution of tourists |
-| 2 | Most Booked Destinations | Identifies destinations with the highest booking counts |
-| 3 | Most Popular Transport Routes | Examines frequently scheduled transport routes |
-| 4 | Booking Status Summary | Summarizes bookings by status |
-| 5 | Revenue by Payment Method | Calculates revenue grouped by payment method |
-| 6 | IoT Transport Alerts by Severity | Counts vehicle alerts according to severity |
-| 7 | Transport Utilization by Route | Examines transport usage across routes |
+| 1 | Tourist Nationality Distribution | Analyze tourists according to nationality |
+| 2 | Most Booked Destinations | Identify frequently booked tourism destinations |
+| 3 | Most Popular Transport Routes | Examine frequently scheduled routes |
+| 4 | Booking Status Summary | Summarize bookings by status |
+| 5 | Revenue by Payment Method | Analyze revenue across payment methods |
+| 6 | IoT Transport Alerts by Severity | Examine alert frequency by severity |
+| 7 | Transport Utilization by Route | Evaluate transport activity across routes |
 
-### SQL Query Results
+### SQL Output Screenshots
 
-Screenshots of the database outputs are available in:
+Screenshots of the MySQL query results are available in the following folder:
 
-[`images/sql_output/`](images/sql_output/)
+[View SQL Output Screenshots](images/sql_output/)
 
 The screenshots include:
 
-- Tourist nationality distribution
-- Most booked destinations
-- Booking status
-- Revenue by payment method
-- Transport alerts by severity
-- Scheduled routes
-- Database table record counts
-- Booking table structure
+- `alerts_by_severity`
+- `booking_status (1)`
+- `bookings_structure`
+- `most_booked_destinations_1`
+- `most_booked_destinations_2`
+- `nationality_distribution`
+- `record_counts`
+- `scheduled_routes`
+- `revenue_by_payment_method`
 
-The complete analytical queries are available in:
-
-[`03_analysis_queries.sql`](sql/03_analysis_queries.sql)
+These screenshots document the query outputs obtained during database implementation and analysis.
 
 ---
 
-## Power BI Data Visualization
+## Power BI Visualizations
 
-Power BI was used to visualize selected tourism management and payment data.
+Power BI was used to represent selected database results through graphical visualizations.
 
-### 1. Booking Status
+### Booking Status
 
-Shows the distribution of booking records across different booking statuses.
+A pie chart showing the distribution of bookings by status.
 
-### 2. Payment Status
+### Payment Status
 
-Presents payment records according to their status.
+A bar chart illustrating the distribution of payment records by payment status.
 
-### 3. Tourist Nationality and Gender
+### Tourist Nationality and Gender
 
-Visualizes tourist information by nationality and gender.
+Charts presenting tourist information according to nationality and gender.
 
-The Power BI chart images are available in:
+**Dashboard Screenshots:** [View Power BI Charts](images/power_bi/)
 
-[`images/power_bi/`](images/power_bi/)
+The folder contains:
+
+- `booking_status`
+- `payment_status`
+- `tourist_nationality_and_gender`
 
 ---
 
 ## IoT Transport Monitoring
 
-The IoT component extends the tourism database by incorporating vehicle monitoring information.
+The IoT component extends the tourism database by storing vehicle monitoring information alongside tourism and transport records.
 
-### Monitoring Parameters
+### Monitored Parameters
 
-| Parameter | Description |
+| Parameter | Purpose |
 |---|---|
-| Vehicle Speed | Records vehicle speed |
-| Fuel Level | Monitors vehicle fuel readings |
-| Engine Temperature | Records engine temperature |
+| Vehicle Speed | Records speed readings |
+| Fuel Level | Monitors fuel readings |
+| Engine Temperature | Records engine-temperature measurements |
 | GPS Position | Stores vehicle location information |
-| Transport Alerts | Records alerts associated with sensor readings |
-| Maintenance Records | Stores maintenance activities |
-| Trip Summary | Maintains transport trip information |
+| Transport Alerts | Records alerts generated from sensor readings |
+| Trip Summary | Maintains trip information |
+| Maintenance Log | Documents vehicle maintenance activities |
 
-### Related Database Tables
+### Transport Alerts
 
-- `IoT_SensorReadings`
-- `IoT_TransportAlerts`
-- `IoT_TripSummary`
-- `IoT_MaintenanceLog`
+The system includes records of alerts associated with transport sensor readings.
 
-The IoT component demonstrates how transport monitoring information can be integrated with a tourism management database.
+An analytical query summarizes alerts according to severity.
+
+The corresponding output screenshot is included in the SQL output folder.
+
+### Maintenance Records
+
+The `IoT_MaintenanceLog` table stores maintenance information associated with transport monitoring activities.
+
+This connects IoT monitoring records with maintenance documentation in the database.
 
 ---
 
@@ -319,89 +321,78 @@ The IoT component demonstrates how transport monitoring information can be integ
 
 - MySQL or MariaDB
 - MySQL Workbench (optional)
-- Power BI Desktop (optional, for working with dashboard data)
+- Power BI Desktop (optional)
 
 ### Step 1: Download the Repository
 
-Download the repository as a ZIP file from GitHub and extract it.
-
-Alternatively, clone the repository using Git.
+Download the repository as a ZIP file from GitHub and extract it to your computer.
 
 ### Step 2: Open MySQL
 
-Start your MySQL server and connect through MySQL Workbench or the MySQL command-line client.
+Start the MySQL server and connect using MySQL Workbench or the command-line client.
 
-### Step 3: Create the Database Tables
+### Step 3: Create the Database
 
-Execute:
+Execute the database creation script:
 
 ```bash
 mysql -u root -p < sql/01_create_tables.sql
 ```
 
-### Step 4: Verify the Tables
+### Step 4: Verify the Database
 
-Execute:
+Execute the database verification script:
 
 ```bash
 mysql -u root -p < sql/02_verification_queries.sql
 ```
 
-### Step 5: Execute the Analysis Queries
+### Step 5: Run Analysis Queries
 
-Execute:
+Execute the analytical SQL script:
 
 ```bash
 mysql -u root -p < sql/03_analysis_queries.sql
 ```
 
-**Important:** The scripts should be executed in the correct database context. Ensure the required sample records have been inserted before running analytical queries.
+**Note:** The SQL scripts must use the correct database context. Analytical queries require the relevant records to exist in the database. If sample data are not included in the creation script, they must be imported separately.
 
-You can also open and execute these SQL files directly through MySQL Workbench.
-
-The repository includes screenshots of the results generated during project implementation.
+Alternatively, open the three SQL files in MySQL Workbench and execute them in the same order.
 
 ---
 
-## Project Reports
+## Project Documentation
 
-Two PDF documents are provided.
+The repository contains two PDF documents.
 
 | Document | Description |
 |---|---|
-| [Complete Project Report](report/Tourism_Management_System_Report.pdf) | Contains the project documentation, database design, normalization, implementation, and results |
-| [Project Results](report/Tourism_Management_System_Results.pdf) | Contains database outputs, SQL analysis results, and Power BI visualizations |
+| [Tourism Management System Report](report/Tourism_Management_System_Report.pdf) | Complete project documentation, including database design, normalization, implementation, and analysis |
+| [Tourism Management System Results](report/Tourism_Management_System_Results.pdf) | SQL results, database outputs, and Power BI visualizations |
 
 ---
 
-## Learning Outcomes
+## Key Learning Outcomes
 
-This project provided practical experience in:
+This project demonstrates practical experience in:
 
-- Relational database design
-- Entity relationship modelling
+- Relational database design and implementation
+- ERD and EERD modelling
 - Database normalization
-- SQL table creation and verification
-- SQL-based data analysis
-- Integrating IoT monitoring information into a database
-- Visualizing structured data using Power BI
-- Organizing and documenting a database engineering project
+- SQL table creation and data verification
+- SQL-based analysis of operational data
+- Integrating IoT transport records into a relational database
+- Data visualization using Power BI
+- Technical documentation and project organization
 
 ---
 
 ## Author
 
-**Muhammad Usman Shah**  
-BS Electrical Engineering  
-Namal University, Mianwali
-
-**Course:** Database Engineering  
-**Instructor:** Mr. Muhammad Bilal
+**Muhammad Usman Shah**
 
 ---
 
 ## Project Status
 
-**Completed — Phase 4 (Final Project)**
-
-Developed as an academic database engineering project.
+**Completed — Database Engineering Final Project**
